@@ -13,6 +13,19 @@ module.exports = {
 
 		sails.sockets.join(req.socket, 'feed');
 		return res.ok();
-	}
+  },
+
+  helloSocket: function(req, res) {
+    if (req.isSocket) {
+      return res.json({
+        WebSocketId: sails.sockets.getId(req),
+        hello: 'socket'
+      })
+    }
+
+    return res.json({
+      hello: 'world'
+    })
+  }
 };
 
