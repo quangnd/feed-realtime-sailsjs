@@ -2,6 +2,7 @@ var feedApp = angular.module('feedApp', ['ngResource', 'angularMoment', 'ngAnima
 
 feedApp.controller('FeedCtrl', ['$scope', '$resource', '$timeout', '$http', function($scope, $resource, $timeout, $http) {
   $scope.feedEntries = $resource('/feed').query();
+  $scope.amountOfConnectedClient = 0;
 
   io.socket.get('/feed/subscribe', function(data, jwr) {
     io.socket.on('new_entry', function(entry) {
