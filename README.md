@@ -10,4 +10,9 @@ A simple feed realtime website with BlueprintAPI, Sails Socket.IO and Faker 😈
 
 *Note: You should open some browser windows to see the socket effect. The data will reset when you restart Sails server*
 
+## To do list
+- [ ] Design simple DB for chat.
+- [ ] Show the amount of client connected.
+- [ ] Implement simple chat with socket.
+
 Happy learning 😁
